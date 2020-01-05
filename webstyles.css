@@ -1,0 +1,329 @@
+html {
+  font-size: 10px;
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+  /*paralax effect*/
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: black;
+  /*paralax effect*/
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: monospace;
+}
+
+/*paralax effect*/
+
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 30vw 0 5vw;
+  position: relative;
+  transform-style: inherit;
+  width: 100vw;
+}
+
+header h1 {
+  position: relative;
+  left: 50px;
+  margin-top: -100px;
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  padding: 1em 0;
+}
+
+header,
+header:before {
+  background: 50% 50% / cover;
+}
+
+header::before,
+.parallax::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url(/images/bg.png);
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  min-height: 100vh;
+}
+
+/*paralax effect end*/
+
+.outer-container1,
+.outer-container2 {
+  display: flex;
+  height: 100vh;
+  background-color: black;
+  justify-content: space-evenly;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+}
+
+.header-container,
+.footer-container {
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: whitesmoke;
+  flex: 1;
+}
+
+#header {
+  font-size: 10rem;
+  flex: 3;
+  font-family: "Long Cang", cursive;
+  animation-name: beam;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes beam {
+  0% {
+    color: darkorange;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: darkorange;
+  }
+}
+
+#subheader {
+  flex: 1;
+  color: whitesmoke;
+}
+
+.img-container {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  max-width: auto;
+  flex: 4;
+}
+
+#image {
+  height: 378px;
+  order: 2;
+}
+
+#image2 {
+  height: 378px;
+  order: 1;
+}
+
+#image3 {
+  height: 378px;
+  order: 3;
+}
+
+#quote {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+  font-size: 2rem;
+  color: darkgray;
+  flex: 1;
+}
+
+#quote span:hover,
+#subheader:hover,
+#timeline-header:hover {
+  animation-name: beam;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+#timeline-header {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Rakkas", cursive;
+}
+
+.timeline-container {
+  position: relative;
+  margin: 50px auto;
+  padding: 0;
+  width: 80vw;
+  background: black;
+  color: black;
+}
+
+.timeline-container:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: white;
+}
+
+.timeline-container ul {
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-container ul li {
+  list-style: none;
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-container ul li:nth-child(odd) {
+  margin-right: auto;
+  text-align: right;
+}
+
+.timeline-container ul li:nth-child(even) {
+  margin-left: auto;
+  text-align: left;
+}
+
+.timeline-container ul li:nth-child(odd):before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: -6px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px red;
+}
+
+.timeline-container ul li:nth-child(even):before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px red;
+}
+
+.timeline-content {
+  padding-bottom: 30px;
+}
+
+.timeline-container ul li h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  color: red;
+  font-size: 14px;
+}
+
+.timeline-container ul li p {
+  margin: 10px 0;
+  padding: 0;
+  color: white;
+}
+
+.timeline-container ul li .time h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.timeline-container ul li:nth-child(odd) .time {
+  position: absolute;
+  top: 12px;
+  right: -165px;
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: 18px;
+  box-shadow: 0 0 0 3px red;
+  color: white;
+}
+
+.timeline-container ul li:nth-child(even) .time {
+  position: absolute;
+  top: 10px;
+  left: -165px;
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 0 3px red;
+  color: white;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  margin: 20px;
+}
+
+.ending-container {
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background: black;
+  font-size: 24px;
+}
+
+.parallax {
+  background: url(/images/endbg.jpg) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 20vh;
+  width: 20vw;
+  text-align: center;
+  top: 50%;
+}
+
+.parallax span {
+  position: relative;
+  color: white;
+  top: 50%;
+}
+
+.parallax:hover {
+  animation-name: reveal;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0.1;
+    height: 20vh;
+    width: 20vw;
+    color: white;
+  }
+  100% {
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    color: black;
+  }
+}
