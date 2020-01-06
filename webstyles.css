@@ -412,7 +412,7 @@ button {
     animation-name: none;
   }
 
-  .parallax:focus {
+  .parallax:active {
     animation-name: reveal;
   }
 }
