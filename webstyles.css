@@ -161,6 +161,7 @@ header::before {
   color: white;
   text-align: center;
   font-size: 24px;
+  background-color: black;
 }
 
 .timeline-container {
@@ -279,6 +280,7 @@ header::before {
   color: white;
   text-align: center;
   margin: 20px;
+  background-color: black;
 }
 
 .ending-container {
@@ -357,7 +359,7 @@ button {
   header h1 {
     left: auto;
     right: auto;
-    color: red;
+    color: yellow;
   }
   header::before {
     content: "";
@@ -365,8 +367,8 @@ button {
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     z-index: -10;
     background: url(images/mbg.jpg) no-repeat center center;
     -webkit-background-size: cover;
