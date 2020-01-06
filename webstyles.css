@@ -348,7 +348,7 @@ button {
 @media (max-width: 767px) {
   header h1 {
     right: auto;
-    color: purple;
+    color: blue;
   }
   header::before {
     bottom: 0;
@@ -363,8 +363,8 @@ button {
     transform-origin: center center 0;
     transform: translateZ(-1px) scale(2);
     z-index: -1;
-    min-height: 100vh;
-    background-attachment: local;
+    max-height: 100vh;
+    background-attachment: scroll;
   }
   #timeline-header {
     font-size: 20px;
