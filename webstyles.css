@@ -328,6 +328,14 @@ header::before {
   }
 }
 
+button {
+  border: none;
+  font-family: monospace;
+  font-size: 24px;
+  color: red;
+  outline: none;
+}
+
 @media (max-width: 1100px) {
   .timeline-container {
     max-width: 100%;
@@ -338,6 +346,12 @@ header::before {
   }
 }
 @media (max-width: 767px) {
+  header h1 {
+    left: 65px;
+  }
+  header::before {
+    background-image: url(images/mbg.jpg);
+  }
   #timeline-header {
     font-size: 20px;
   }
@@ -370,7 +384,29 @@ header::before {
     right: inherit;
   }
 
-  .ending-container {
-    /*display: none;*/
+  @keyframes reveal {
+    0% {
+      opacity: 0.1;
+      height: 20vh;
+      width: 20vw;
+      color: white;
+    }
+    100% {
+      opacity: 1;
+      height: 100vh;
+      width: 100vw;
+      color: red;
+    }
+  }
+
+  .parallax {
+    background: url(images/mendbg.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .parallax:active {
+    animation-name: reveal;
+    animation-duration: infinite;
+    animation-iteration-count: 1;
   }
 }
