@@ -351,8 +351,19 @@ button {
     left: 65px;
   }
   header::before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
     background-image: url(images/mbg.jpg);
     background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
   }
   #timeline-header {
     font-size: 20px;
@@ -386,7 +397,7 @@ button {
     right: inherit;
   }
 
-  @keyframes reveal {
+  @keyframes reveal2 {
     0% {
       opacity: 0.1;
       height: 20vh;
@@ -404,8 +415,8 @@ button {
     background-size: cover;
     background-attachment: fixed;
   }
-  .parallax:focus {
-    animation-name: reveal;
+  .ending-container button:focus {
+    animation-name: reveal2;
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
