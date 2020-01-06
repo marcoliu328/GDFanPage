@@ -348,13 +348,23 @@ button {
 }
 @media (max-width: 767px) {
   header h1 {
-    text-align: center;
+    right: auto;
     color: yellow;
   }
   header::before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
     background-image: url(images/mbg.jpg);
-    max-width: 100vw;
-    height: auto;
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
   }
   #timeline-header {
     font-size: 20px;
@@ -388,19 +398,6 @@ button {
     right: inherit;
   }
 
-  @keyframes reveal2 {
-    0% {
-      opacity: 0.1;
-      height: 20vh;
-      width: 20vw;
-    }
-    100% {
-      opacity: 1;
-      height: 100vh;
-      width: 100vw;
-    }
-  }
-
   .parallax {
     background: url(images/mendbg.jpg) no-repeat center;
     background-size: cover;
@@ -410,10 +407,12 @@ button {
     text-align: center;
     top: 50%;
   }
+
+  .parallax:hover {
+    animation-name: none;
+  }
+
   .parallax:focus {
-    animation-name: reveal2;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-name: reveal;
   }
 }
