@@ -346,7 +346,7 @@ button {
   }
 }
 @media (max-width: 767px) {
-  header{
+  header {
     background: url(images/mbg.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
@@ -363,7 +363,7 @@ button {
     display: none;
   }
   #timeline-header {
-    font-size: 20px;s
+    font-size: 20px;
   }
   .timeline-container ul li h3 {
     text-align: left;
