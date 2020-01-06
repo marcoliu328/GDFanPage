@@ -48,8 +48,7 @@ header:before {
   background: 50% 50% / cover;
 }
 
-header::before,
-.parallax::before {
+header::before {
   bottom: 0;
   content: "";
   left: 0;
@@ -126,18 +125,18 @@ header::before,
 }
 
 #image {
-  height: 378px;
   order: 2;
+  height: 378px;
 }
 
 #image2 {
-  height: 378px;
   order: 1;
+  height: 378px;
 }
 
 #image3 {
-  height: 378px;
   order: 3;
+  height: 378px;
 }
 
 #quote {
@@ -246,6 +245,7 @@ header::before,
   margin: 10px 0;
   padding: 0;
   color: white;
+  font-size: 14px;
 }
 
 .timeline-container ul li .time h4 {
@@ -256,7 +256,7 @@ header::before,
 
 .timeline-container ul li:nth-child(odd) .time {
   position: absolute;
-  top: 12px;
+  top: 10px;
   right: -165px;
   margin: 0;
   padding: 8px 16px;
@@ -271,7 +271,7 @@ header::before,
   left: -165px;
   margin: 0;
   padding: 8px 16px;
-  border-radius: 10px;
+  border-radius: 18px;
   box-shadow: 0 0 0 3px red;
   color: white;
 }
@@ -325,5 +325,52 @@ header::before,
     height: 100vh;
     width: 100vw;
     color: black;
+  }
+}
+
+@media (max-width: 1100px) {
+  .timeline-container {
+    max-width: 100%;
+  }
+  .img-container {
+    overflow-x: scroll;
+    justify-content: left;
+  }
+}
+@media (max-width: 767px) {
+  #timeline-header {
+    font-size: 20px;
+  }
+  .timeline-container ul li h3 {
+    text-align: left;
+    font-size: 20px;
+  }
+  .timeline-container {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .timeline-container:before {
+    left: 20px;
+  }
+  .timeline-container ul li:nth-child(odd),
+  .timeline-container ul li:nth-child(even) {
+    width: 100%;
+    text-align: left;
+    padding: 50px;
+  }
+  .timeline-container ul li:nth-child(odd)::before,
+  .timeline-container ul li:nth-child(even)::before {
+    top: 0;
+    left: 16px;
+  }
+  .timeline-container ul li:nth-child(odd) .time,
+  .timeline-container ul li:nth-child(even) .time {
+    left: 50px;
+    top: -10px;
+    right: inherit;
+  }
+
+  .ending-container {
+    /*display: none;*/
   }
 }
