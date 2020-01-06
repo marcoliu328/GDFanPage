@@ -352,6 +352,7 @@ button {
   }
   header::before {
     background-image: url(images/mbg.jpg);
+    background-size: cover;
   }
   #timeline-header {
     font-size: 20px;
@@ -403,7 +404,7 @@ button {
     background-size: cover;
     background-attachment: fixed;
   }
-  .parallax:active {
+  .parallax:focus {
     animation-name: reveal;
     animation-duration: 3s;
     animation-iteration-count: 1;
