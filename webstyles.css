@@ -161,7 +161,6 @@ header::before {
   color: white;
   text-align: center;
   font-size: 24px;
-  font-family: "Rakkas", cursive;
 }
 
 .timeline-container {
@@ -349,7 +348,7 @@ button {
 @media (max-width: 767px) {
   header h1 {
     right: auto;
-    color: yellow;
+    color: purple;
   }
   header::before {
     bottom: 0;
@@ -365,6 +364,7 @@ button {
     transform: translateZ(-1px) scale(2);
     z-index: -1;
     min-height: 100vh;
+    background-attachment: local;
   }
   #timeline-header {
     font-size: 20px;
