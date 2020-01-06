@@ -57,7 +57,7 @@ header::before,
   right: 0;
   top: 0;
   display: block;
-  background-image: url(/images/bg.png);
+  background-image: url(images/bg.png);
   background-size: cover;
   transform-origin: center center 0;
   transform: translateZ(-1px) scale(2);
@@ -291,7 +291,7 @@ header::before,
 }
 
 .parallax {
-  background: url(/images/endbg.jpg) no-repeat center;
+  background: url(images/endbg.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   height: 20vh;
