@@ -346,14 +346,6 @@ button {
   }
 }
 @media (max-width: 767px) {
-  header {
-    box-sizing: border-box;
-    max-height: 100vh;
-    padding: 0;
-    position: relative;
-    transform-style: inherit;
-    max-width: 100vw;
-  }
   header h1 {
     right: auto;
     color: blue;
@@ -420,7 +412,7 @@ button {
     animation-name: none;
   }
 
-  .parallax:focus {
+  .parallax:active {
     animation-name: reveal;
   }
 }
