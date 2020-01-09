@@ -193,7 +193,7 @@ header::before {
   position: relative;
   margin: 50px auto;
   padding: 0;
-  width: 80vw;
+  width: 90vw;
   background: black;
   color: black;
 }
@@ -204,7 +204,7 @@ header::before {
   left: 50%;
   width: 2px;
   height: 100%;
-  background: white;
+  background: linear-gradient(135deg, red, blue);
 }
 
 .timeline-container ul {
@@ -235,11 +235,38 @@ header::before {
   position: absolute;
   top: 24px;
   right: -6px;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: white;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 0 3px red;
+}
+
+.timeline-container ul li:nth-child(odd):hover:before,
+.timeline-container ul li:nth-child(even):hover:before {
+  animation: backgroundbeam 5s, rotation 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes backgroundbeam {
+  0% {
+    background: red;
+  }
+  50% {
+    background: yellow;
+  }
+  100% {
+    background: red;
+  }
 }
 
 .timeline-container ul li:nth-child(even):before {
@@ -247,10 +274,9 @@ header::before {
   position: absolute;
   top: 24px;
   left: -6px;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background: white;
-  border-radius: 50%;
   box-shadow: 0 0 0 3px red;
 }
 
@@ -282,7 +308,7 @@ header::before {
 .timeline-container ul li:nth-child(odd) .time {
   position: absolute;
   top: 10px;
-  right: -165px;
+  right: -110px;
   margin: 0;
   padding: 8px 16px;
   border-radius: 18px;
@@ -293,12 +319,18 @@ header::before {
 .timeline-container ul li:nth-child(even) .time {
   position: absolute;
   top: 10px;
-  left: -165px;
+  left: -110px;
   margin: 0;
   padding: 8px 16px;
   border-radius: 18px;
   box-shadow: 0 0 0 3px red;
   color: white;
+}
+
+.timeline-container ul li:nth-child(even):hover .time,
+.timeline-container ul li:nth-child(odd):hover .time {
+  color: black;
+  background-color: red;
 }
 
 .footer {
@@ -344,13 +376,11 @@ header::before {
     opacity: 0.1;
     height: 20vh;
     width: 20vw;
-    color: white;
   }
   100% {
     opacity: 1;
     height: 100vh;
     width: 100vw;
-    color: black;
   }
 }
 
