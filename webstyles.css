@@ -92,19 +92,25 @@ header::before {
   flex: 3;
   font-family: "Long Cang", cursive;
   animation-name: beam;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 
 @keyframes beam {
   0% {
+    color: orange;
+  }
+  25% {
     color: darkorange;
   }
   50% {
     color: red;
   }
-  100% {
+  75% {
     color: darkorange;
+  }
+  100% {
+    color: orange;
   }
 }
 
@@ -174,19 +180,22 @@ header::before {
   flex: 1;
 }
 
-#quote span:hover,
-#subheader:hover,
-#timeline-header:hover {
-  animation-name: beam;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+#timeline {
+  background: url(images/seoulbg.jpg) no-repeat center center/cover;
+}
+
+#timeline #darken {
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #timeline-header {
   color: white;
   text-align: center;
-  font-size: 24px;
-  background-color: black;
+  font-family: "Long Cang", cursive;
+  font-size: 5rem;
+  animation-name: beam;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 .timeline-container {
@@ -194,8 +203,6 @@ header::before {
   margin: 50px auto;
   padding: 0;
   width: 90vw;
-  background: black;
-  color: black;
 }
 
 .timeline-container:before {
@@ -314,6 +321,7 @@ header::before {
   border-radius: 18px;
   box-shadow: 0 0 0 3px red;
   color: white;
+  transition: background-color 0.5s;
 }
 
 .timeline-container ul li:nth-child(even) .time {
@@ -325,6 +333,7 @@ header::before {
   border-radius: 18px;
   box-shadow: 0 0 0 3px red;
   color: white;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .timeline-container ul li:nth-child(even):hover .time,
@@ -333,11 +342,23 @@ header::before {
   background-color: red;
 }
 
-.footer {
+.footer p {
   color: white;
   text-align: center;
   margin: 20px;
-  background-color: black;
+}
+
+.footer p a {
+  padding: 5px;
+  text-decoration: none;
+  color: red;
+  border-width: 2px;
+  border-radius: 5px;
+  transition: background-color 0.5s;
+}
+
+.footer p a:hover {
+  background-color: grey;
 }
 
 .ending-container {
@@ -423,6 +444,10 @@ button {
   }
   header::before {
     display: none;
+  }
+
+  #timeline {
+    background: black;
   }
   #timeline-header {
     font-size: 20px;
